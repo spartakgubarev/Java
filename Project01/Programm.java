@@ -178,18 +178,18 @@ public class Programm {
         //     }
         // System.out.println();
         // }
-        try (FileWriter fw = new FileWriter("Project01/file.txt", true)) { // false - создание нового, true - дозапись
-            fw.write("line 1");
-            fw.append('\n');
-            fw.append('2');
-            fw.append('\n');
-            fw.append("line 3");
-            fw.flush();
+        // try (FileWriter fw = new FileWriter("Project01/file.txt", true)) { // false - создание нового, true - дозапись
+        //     fw.write("line 1");
+        //     fw.append('\n');
+        //     fw.append('2');
+        //     fw.append('\n');
+        //     fw.append("line 3");
+        //     fw.flush();
 
-        }
-        catch (IOException ex) {
-            System.out.println(ex.getLocalizedMessage());
-        }
+        // }
+        // catch (IOException ex) {
+        //     System.out.println(ex.getLocalizedMessage());
+        // }
         // String[] arr = new String[] {"spartak", "sparta", "spart", "spar", "spa", "sp", "s"};
         // for (String item : arr) {
         //     System.out.println(item);
