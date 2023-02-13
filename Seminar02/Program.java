@@ -9,24 +9,20 @@ public class Program {
         // Написать метод, который вернет строку длины N, которая состит из чередующихся
         // символов с1 и с2, начиная с с1.
         Scanner sc = new Scanner(System.in);
-        System.out.print("Введите число больше 0: ");
+        System.out.print("Введите число больше 0 и четное: ");
         int count = sc.nextInt();
-
-        // int count = 10;
-        StringBuilder sb = nameString(count);
-        System.out.println(sb);
+        char sym1 = 'h';
+        char sym2 = 'i';
+        String strName = nameString(count, sym1, sym2);
+        System.out.println(strName);
         sc.close();
     }
 
-    public static StringBuilder nameString(int count) {
-        String strText = "c1c2";
-        StringBuilder s = new StringBuilder(strText);
-        // String strName = "c1c2";
-        for (int i = 1; i < count; i++) {
-            s.append(strText);
-
+    private static String nameString(int num, char c1, char c2) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < num / 2; i++) {
+            sb.append(c1).append(c2);
         }
-
-        return s;
+        return sb.toString();
     }
 }
