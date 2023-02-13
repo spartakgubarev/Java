@@ -1,4 +1,4 @@
-package Lesson_02;
+package Lection02;
 import java.io.File;
 
 public class Ex002_fileSystemDemo {

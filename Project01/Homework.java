@@ -8,14 +8,14 @@ package Project01;
 
 public class Homework {
     public static void main(String[] args) throws Exception {
-        int koef = koef_k.intKoef_k(); // вернулось коэффициент К
+        int koef = koef_k.intKoef_k(); // вернулся коэффициент К
 
         String str = "K=" + koef + " => ";
         System.out.println(str);
 
-        for (int i = koef; i > 0; i--) {
+        for (int i = koef; i >= 0; i--) {
             int numRnd = rnd.intRND(); // вернулось случайное число от 0 до 100
-            str += numRnd + "*x^" + i + '+';
+            str += numRnd + "*x^" + i + " + ";
         }
         System.out.println(str);
 
