@@ -15,4 +15,3 @@ pq.click(462,811) # кликнуть по координатам
 # pq.typewrite('Genya, you work?', 0.5)
 pq.typewrite("google.com")
 pq.typewrite(["enter"]) # нажать enter
-
