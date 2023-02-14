@@ -1,6 +1,5 @@
 package Seminar02;
 
-import java.security.Identity;
 import java.util.Scanner;
 
 public class Program {
@@ -59,12 +58,9 @@ public class Program {
         } else
             System.out.println("Строка пустая!");
     }
-    // 0 1 2 3 4 5 6 7 8 9
-    // a a a a b b b c d d
-    //
-
+    
     // Task 03. Напишите мтод, который принимает на вход строку (String) и
     // определяет
     // является ли строка палиндромом (возвращает boolean значение).
-
+    
 }
