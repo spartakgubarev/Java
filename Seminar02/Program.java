@@ -28,39 +28,53 @@ public class Program {
 
         // Task 02. Напишите метод, котрый сжимает строку. Пример: вход aaaabbbcdd ->
         // a4b3c1d2
-        String strText = "aaaabbbcddd";
-        stringCompression(strText);
+        // String strText = "aaaabbbcddd";
+        // stringCompression(strText);
+        String text = "казак";
+        boolean answer = palindrome(text);
+        System.out.println(answer);
     }
+    //
+    // private static void stringCompression(String text) {
+    // if (text != "") {
+    // StringBuilder sb = new StringBuilder();
+    // int index = 0;
+    // int count = 1;
+    // char element = text.charAt(0);
+    // System.out.println(index < text.length());
+    // while (index < text.length()) {
+    // if (index + 1 == text.length()) {
+    // sb.append(element).append(count);
+    // } else {
+    // if (element == text.charAt(index + 1)) {
+    // count++;
+    // } else {
+    // sb.append(element).append(count);
+    // count = 1;
+    // element = text.charAt(index + 1);
+    // }
+    // }
+    // index++;
+    // }
+    // System.out.println(text);
+    // System.out.println(sb);
+    // } else
+    // System.out.println("Строка пустая!");
+    // }
 
-    private static void stringCompression(String text) {
-        if (text != "") {
-            StringBuilder sb = new StringBuilder();
-            int index = 0;
-            int count = 1;
-            char element = text.charAt(0);
-            System.out.println(index < text.length());
-            while (index < text.length()) {
-                if (index + 1 == text.length()) {
-                    sb.append(element).append(count);
-                } else {
-                    if (element == text.charAt(index + 1)) {
-                        count++;
-                    } else {
-                        sb.append(element).append(count);
-                        count = 1;
-                        element = text.charAt(index + 1);
-                    }
-                }
-                index++;
-            }
-            System.out.println(text);
-            System.out.println(sb);
-        } else
-            System.out.println("Строка пустая!");
-    }
-    
-    // Task 03. Напишите мтод, который принимает на вход строку (String) и
+    // Task 03. Напишите метод, который принимает на вход строку (String) и
     // определяет
     // является ли строка палиндромом (возвращает boolean значение).
-    
+    // String text = "asdfggfdsa";
+    private static boolean palindrome(String pal) {
+        char[] newPal = pal.toCharArray();
+        Integer len = pal.length() / 2;
+        for (int i = 0; i < len; i++) {
+            if (newPal[i] == newPal[pal.length() - 1 - i]) {
+            } else
+                return false;
+        }
+        return true;
+    }
+
 }
