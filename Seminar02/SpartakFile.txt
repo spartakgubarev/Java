@@ -1,0 +1,7 @@
+G:\Учеба\Разработчик\repo\Java\.git
+G:\Учеба\Разработчик\repo\Java\Homework
+G:\Учеба\Разработчик\repo\Java\Lection02
+G:\Учеба\Разработчик\repo\Java\Project01
+G:\Учеба\Разработчик\repo\Java\Seminar01
+G:\Учеба\Разработчик\repo\Java\Seminar02
+G:\Учеба\Разработчик\repo\Java\Sparta
