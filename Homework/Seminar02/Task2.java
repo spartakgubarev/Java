@@ -1,10 +1,19 @@
 // 2.Реализуйте алгоритм сортировки пузырьком числового массива, результат после каждой итерации запишите в лог-файл.
 package Homework.Seminar02;
 
+import java.io.IOException;
+import java.util.logging.*;
 import java.util.Random;
 
 public class Task2 {
-    public static void main(String[] args) {
+    static Logger logger = Logger.getLogger(Task2.class.getName());
+
+    public static void main(String[] args) throws IOException {
+        FileHandler fh = new FileHandler("G:/Учеба/Разработчик/repo/Java/Homework/Seminar02/log.txt");
+        logger.addHandler(fh);
+        SimpleFormatter sFormat = new SimpleFormatter();
+        fh.setFormatter(sFormat);
+
         int countRandom = 20;
         int maxValue = 50;
         int[] arr = ranVal(countRandom, maxValue); // заполняем массив
@@ -44,8 +53,18 @@ public class Task2 {
                     sortArr[j - 1] = sortArr[j];
                     sortArr[j] = _temp;
                 }
+                isLog(sortArr);
             }
         }
         return sortArr;
+    }
+
+    private static void isLog(int[] tempArr) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < tempArr.length; i++) {
+            sb.append(tempArr[i]).append(" ");
+        }
+        logger.info(sb.toString());
+
     }
 }
