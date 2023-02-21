@@ -8,20 +8,20 @@ public class Homework {
         int[] arr = new int[] { 3, 5, 1, 6, 9, 8 };
         int[] newArr = sort(arr);
 
-        System.err.println(Arrays.toString(arr));
-        System.err.println(Arrays.toString(newArr));
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(newArr));
     }
 
     // newArray - копирую оригинальный массив
     // tempArray - создаю хранилище для сортировки
-    // rew -
+    // res - результирующий массив
     private static int[] sort(int[] array) {
         int[] newArray = Arrays.copyOf(array, array.length);
         int[] tempArray = new int[array.length];
         int[] res = merge(newArray, tempArray, 0, array.length);
         return res;
     }
-
+    
     // startIndex - начальный индекс
     // endIndex - конечный индекс
     private static int[] merge(int[] newArray, int[] tempArray, int startIndex, int endIndex) {
@@ -37,9 +37,22 @@ public class Homework {
         int[] sort1 = merge(newArray, tempArray, startIndex, midle);
         int[] sort2 = merge(newArray, tempArray, midle, endIndex);
         
-
         // Сортировка, слияние
+        int index1 = startIndex;
+        int index2 = midle;
+        int destIndex = startIndex;
         
-        return newArray;
+        int[] result = sort1 == newArray ? tempArray : newArray;
+        while (index1 < midle && index2 < endIndex) {
+            result[destIndex++] = sort1[index1] < sort2[index2]
+                    ? sort1[index1++] : sort2[index2++];
+        }
+        while (index1 < midle) {
+            result[destIndex++] = sort1[index1++];
+        }
+        while (index2 < endIndex) {
+            result[destIndex++] = sort2[index2++];
+        }
+        return result;
     }
 }
