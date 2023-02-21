@@ -25,11 +25,21 @@ public class Homework {
     // startIndex - начальный индекс
     // endIndex - конечный индекс
     private static int[] merge(int[] newArray, int[] tempArray, int startIndex, int endIndex) {
-        if (startIndex >= endIndex) {
+        if (startIndex >= endIndex-1) {
             return newArray;
         }
+        // делю массив пополам каждый рекурсивный вызов, пока деление равно или больше разницы между началом и концом массива.
+        // Узнаю конец для первого подмассива и начало второго подмассива
+        // sort1 - первый подмассив
+        // sort2 - второй подмассив
+        // midle - начало - конец для каждого разделения (середина)
+        int midle = startIndex + (endIndex - startIndex) / 2;
+        int[] sort1 = merge(newArray, tempArray, startIndex, midle);
+        int[] sort2 = merge(newArray, tempArray, midle, endIndex);
+        
 
-
+        // Сортировка, слияние
+        
         return newArray;
     }
 }
