@@ -5,11 +5,9 @@ import java.util.Arrays;
 public class Homework {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
         int[] arr = new int[] { 12, 11, 13, 5, 6, 7 };
         System.out.println(Arrays.toString(arr));
         int size = arr.length;
-
         heapSort(arr, size);
     }
 
@@ -33,7 +31,6 @@ public class Homework {
         int l = 2 * i;
         int r = 2 * i + 1;
         int largestElement;
-
         if (l <= heapsize && myArray[l] > myArray[i]) {
             largestElement = l;
         } else {
