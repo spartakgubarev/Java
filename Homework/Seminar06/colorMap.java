@@ -1,8 +1,6 @@
 package Homework.Seminar06;
 
 public class colorMap {
-    // int row;
-    // int col;
 
  // Раскраска карты
  public void mapColor(int[][] mapLab) {
@@ -11,6 +9,7 @@ public class colorMap {
         
         switch (mapLab[row][col]) {
             case -1:
+            // System.out.print(String.format("%S", "#"));
             System.out.print("#" +" ");
             break;
             case -9:
@@ -24,7 +23,8 @@ public class colorMap {
             break;
 
           default:
-            break;
+          System.out.print(String.format("%5d", mapLab[row][col]));  
+          break;
         }
       }
       System.out.print("\n");
