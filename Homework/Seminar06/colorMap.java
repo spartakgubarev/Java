@@ -6,7 +6,6 @@ public class colorMap {
   public void mapColor(int[][] mapLab) {
     for (int row = 0; row < mapLab.length; row++) {
       for (int col = 0; col < mapLab[row].length; col++) {
-
         switch (mapLab[row][col]) {
           case -1:
             System.out.print(" ##");
@@ -20,7 +19,6 @@ public class colorMap {
           case -3:
             System.out.print(" &&");
             break;
-
           default:
             System.out.print(String.format("%3d", mapLab[row][col]));
             break;

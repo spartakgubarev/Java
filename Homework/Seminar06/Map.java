@@ -1,11 +1,10 @@
 package Homework.Seminar06;
 
 public class Map {
-    // Создание карты (-1 стена), (-9 пустота), (-2 вход), (-3 выход)
-    // int[][] getMap;
-    int[][] map;
-    int[] start;
-    int[] exit;
+  // Создание карты (-1 стена), (-9 пустота), (-2 вход), (-3 выход)
+  int[][] map;
+  int[] start;
+  int[] exit;
 
   public Map() {
     int[][] map = {
@@ -26,9 +25,11 @@ public class Map {
     };
     this.map = map;
   }
-  public int[][] getMap(){
+
+  public int[][] getMap() {
     return map;
   }
+
   public void getStart(int x, int y) {
     map[x][y] = -2;
   }
@@ -36,7 +37,5 @@ public class Map {
   public void getExit(int x, int y) {
     map[x][y] = -3;
   }
-
-  // public roadMap(int)
 
 }
