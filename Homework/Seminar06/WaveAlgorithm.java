@@ -1,10 +1,14 @@
 package Homework.Seminar06;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
 // алгоритм поиск в ширину
 public class WaveAlgorithm {
+    int count;
+    ArrayList<Integer> road = new ArrayList<>();
+    int[][] map;
     int x;
     int y;
     int startX;
@@ -79,14 +83,61 @@ public class WaveAlgorithm {
             }
         }
         System.out.println(map[x][y]);
-        
+        this.map = map;
+        // this.x = x;
+
         return map;
     }
-    public int setExitX(){
-        return x;
+    // public int setExitX(){
+    //     return x;
+    // }
+    // public int setExitY(){
+    //     return y;
+    // }
+
+    public ArrayList<Integer> road(){
+        // ArrayList<Integer> road = new ArrayList<>();
+        while (map[x][y]>1) {
+            if (map[x+1][y] == map[x][y]-1) {
+                x++;
+                road.add(x);
+                road.add(y);
+            }
+            if (map[x][y+1] == map[x][y]-1) {
+                y++;
+                road.add(x);
+                road.add(y);
+            }
+            if (map[x-1][y] == map[x][y]-1) {
+                x--;
+                road.add(x);
+                road.add(y);
+            }
+
+            if (map[x][y-1] == map[x][y]-1) {
+                y--;
+                road.add(x);
+                road.add(y);
+            }
+        }
+        // for (Integer aaa : road) {
+        //     System.out.print("xy= " + aaa);
+        //     System.out.println("");
+        // }
+        // System.out.println(road.size());
+        // this.road = road;
+        return road;
+        // System.out.println(map[x][y]);
     }
-    public int setExitY(){
-        return y;
+    public int[][] newRoad(int[][] mapClear){
+        count =1;
+        // System.out.println(road.get(1));
+        for (int i = 0; i < road.size(); i+=2) {
+            mapClear[road.get(i)][road.get(i+1)] = count;
+            count++;
+            // System.out.println(i);
+        }
+    return mapClear;
     }
 
 }

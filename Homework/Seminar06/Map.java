@@ -37,4 +37,6 @@ public class Map {
     map[x][y] = -3;
   }
 
+  // public roadMap(int)
+
 }
