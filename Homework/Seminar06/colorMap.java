@@ -9,20 +9,20 @@ public class colorMap {
 
         switch (mapLab[row][col]) {
           case -1:
-            System.out.print(" ## ");
+            System.out.print(" ##");
             break;
           case -9:
-            System.out.print("    ");
+            System.out.print("   ");
             break;
           case -2:
-            System.out.print(" @@ ");
+            System.out.print(" @@");
             break;
           case -3:
-            System.out.print(" && ");
+            System.out.print(" &&");
             break;
 
           default:
-            System.out.print(String.format("%4d", mapLab[row][col]));
+            System.out.print(String.format("%3d", mapLab[row][col]));
             break;
         }
       }
